@@ -13,12 +13,10 @@
 	<link href="stylesheets/css" rel="stylesheet">
 
 	<!-- Plugins CSS -->
-	<link rel="stylesheet" type="text/css" href="stylesheets/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="stylesheets/themify-icons.css">
 	<link rel="stylesheet" type="text/css" href="stylesheets/animate.min.css">
 	<link rel="stylesheet" type="text/css" href="stylesheets/jquery.fancybox.min.css">
 	<link rel="stylesheet" type="text/css" href="stylesheets/owl.carousel.min.css">
-
+	<script src="https://kit.fontawesome.com/ab223b40fc.js"></script>
 	<!-- Theme CSS -->
 	<link rel="stylesheet" type="text/css" href="stylesheets/style.css">
 
@@ -33,26 +31,55 @@
            clip: rect(0 1263.3333740234375px 612.6666870117188px 0);
            clip: rect(0, 1263.3333740234375px, 612.6666870117188px, 0);
         }</style>
-		
+		<style>
+			.v-header{
+  height:100vh;
+  display:flex;
+  align-items:center;
+  color:#fff;
+}
+
+
+
+.fullscreen-video-wrap{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100vh;
+  overflow:hidden;
+}
+
+.fullscreen-video-wrap video{
+  min-height:100%;
+  min-width:100%;
+}
+
+.header-overlay{
+  height:100vh;
+  position: absolute;
+  top:0;
+  left:0;
+  width:100vw;
+  z-index:1;
+  background:#f74c40;
+  opacity:0.3;
+}
+
+
+
+
+		</style>
 	</head>
 
 <body>
-	<div class="preloader" style="display: none;">
-		<img src="images/preloader.svg" alt="Pre-loader">
-	</div>
 
-	<!-- =======================
-	header Start-->
-	<header class="header-static navbar-sticky navbar-light">
+	<header class="header-static navbar-sticky navbar-light" >
 		
-
-
-		<!-- Logo Nav Start -->
 		<nav class="navbar navbar-expand-lg">
 			<div class="container">
-				<!-- Logo -->
-				<a class="navbar-brand" href="https://wizixo.webestica.com/index.html">
-					
+				<a class="navbar-brand" href="">
+					<img src="images/logo.png" alt="" width="120px">
 				</a>
 				<!-- Menu opener button -->
 				<button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -61,31 +88,23 @@
 				<!-- Main Menu Start -->
 				<div class="collapse navbar-collapse" id="navbarCollapse">
 					<ul class="navbar-nav ml-auto">
-						<li class="nav-item dropdown">
-							<a class="nav-link">Home</a>
+						<li class="nav-item">
+							<a class="nav-link" href="">Home</a>
 						</li>
-						<li class="nav-item dropdown">
-							<a class="nav-link">About</a>
+						<li class="nav-item">
+							<a class="nav-link" href="">About</a>
 						</li>
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle active" href="" id="pagesMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Products</a>
-							<ul class="dropdown-menu" aria-labelledby="pagesMenu">
-								<li> <a class="dropdown-item" href="">Poochoh</a> </li>
-								<li> <a class="dropdown-item" href="">ARVR Bazaar</a> </li>
-								<li> <a class="dropdown-item" href="">Seekho Virtually</a> </li>
-								<li> <a class="dropdown-item" href="">Data Science Animated</a> </li>
-								<li> <a class="dropdown-item" href="">Block Chain Bazaar</a> </li>
-							</ul>
+						<li class="nav-item">
+							<a class="nav-link" href="">Services</a>
 						</li>
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" href="" id="portfolioMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
-							
+						<li class="nav-item">
+							<a class="nav-link" href="">Products</a>
 						</li>
-						<li class="nav-item dropdown megamenu">
-							<a class="nav-link dropdown-toggle" href="" id="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Trainings</a>
+						<li class="nav-item">
+							<a class="nav-link" href="">Trainings</a>
 						</li>
-						<li class="nav-item dropdown">
-							<a class="nav-link" href="" id="docMenu">Contact</a>
+						<li class="nav-item">
+							<a class="nav-link" href="" >Contact</a>
 						</li>
 					</ul>
 				</div>
@@ -94,12 +113,12 @@
 		</nav>
 		<!-- Logo Nav End -->
 	</header>
-	<!-- =======================
-	header End-->
 
-	<!-- =======================
-	Banner innerpage -->
-	<div class="innerpage-banner left bg-overlay-dark-5 py-7 parallax-bg" data-jarallax-video="https://www.youtube.com/watch?v=UwsrzCVZAb8">
+	<div class="innerpage-banner left py-7 parallax-bg" data-jarallax-video="">
+		<div class="fullscreen-video-wrap bg-dark-grad">
+            <video src="vs.mp4" autoplay="true" loop="true" muted></video>
+        </div>
+		<div class="header-overlay"></div>
 		<div class="container py-7">
 			<div class="row all-text-white pb-7">
 				<div class="col-12 col-lg-8">
@@ -108,16 +127,52 @@
 				</div>
 			</div>
 		</div>
-		<svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" class="wave"><defs></defs><path id="wave-one" d="M 0 68.59355342317473 C 126.33333740234376 80.14159824375403 126.33333740234376 80.14159824375403 252.66667480468752 74.36757583346439 C 379.00001220703126 68.59355342317473 379.00001220703126 68.59355342317473 505.33334960937503 78.61587834917923 C 631.6666870117188 88.63820327518374 631.6666870117188 88.63820327518374 758.0000244140625 79.85440667714926 C 884.3333618164063 71.0706100791148 884.3333618164063 71.0706100791148 1010.6666992187501 77.65050723973081 C 1137.0000366210938 84.23040440034687 1137.0000366210938 84.23040440034687 1263.3333740234375 79.66690021608713 L 1263.3333740234375 3807.4375 L 0 3807.4375 Z" fill="#fff"></path></svg>
-		<svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" class="wave"><defs></defs><path id="wave-two" d="M 0 53.60479966775511 C 157.9166717529297 62.92646229524033 157.9166717529297 62.92646229524033 315.8333435058594 58.265630981497715 C 473.75001525878906 53.6047996677551 473.75001525878906 53.6047996677551 631.6666870117188 55.32707928976158 C 789.5833587646484 57.04935891176808 789.5833587646484 57.04935891176808 947.5000305175781 47.49083546610349 C 1105.4167022705078 37.9323120204389 1105.4167022705078 37.9323120204389 1263.3333740234375 55.32707928976158 L 1263.3333740234375 3807.4375 L 0 3807.4375 Z" fill="rgba(255, 255, 255, .8)"></path></svg>
-	<div id="jarallax-container-0" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; overflow: hidden; pointer-events: none; z-index: -100;"><div style="background-position: 50% 50%; background-size: cover; background-repeat: no-repeat; background-image: url(&quot;https://img.youtube.com/vi/dRj5Xfjh7Dk/maxresdefault.jpg&quot;); position: fixed; top: 0px; left: 0px; width: 1263.33px; height: 611.333px; overflow: hidden; pointer-events: none; margin-top: -0.666672px; transform: translate3d(0px, 62.849px, 0px); display: none;"></div><iframe id="VideoWorker-0" frameborder="0" allowfullscreen="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" title="YouTube video player" width="640" height="360" src="./gaming_files/dRj5Xfjh7Dk.html" style="position: fixed; inset: 0px; width: 1263.33px; height: 1110.63px; max-width: none; max-height: none; margin: -278.813px 0px 0px; z-index: -1; transform: translate3d(0px, 77.099px, 0px);"></iframe></div></div>
-
-	<section class="about-newsletter bg-overlay-dark-8 parallax-bg" style="background: none center center / cover;" data-jarallax-original-styles="background:url(images/bg/03.jpg) center center; background-size:cover; ">
+		<svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" class="wave"><defs></defs><path id="wave-one" d="M 0 68.59355342317473 C 126.33333740234376 80.14159824375403 126.33333740234376 80.14159824375403 252.66667480468752 74.36757583346439 C 379.00001220703126 68.59355342317473 379.00001220703126 68.59355342317473 505.33334960937503 78.61587834917923 C 631.6666870117188 88.63820327518374 631.6666870117188 88.63820327518374 758.0000244140625 79.85440667714926 C 884.3333618164063 71.0706100791148 884.3333618164063 71.0706100791148 1010.6666992187501 77.65050723973081 C 1137.0000366210938 84.23040440034687 1137.0000366210938 84.23040440034687 1263.3333740234375 79.66690021608713 L 1263.3333740234375 3807.4375 L 0 3807.4375 Z" fill="#AA132D"></path></svg>
+		<svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" class="wave"><defs></defs><path id="wave-two" d="M 0 53.60479966775511 C 157.9166717529297 62.92646229524033 157.9166717529297 62.92646229524033 315.8333435058594 58.265630981497715 C 473.75001525878906 53.6047996677551 473.75001525878906 53.6047996677551 631.6666870117188 55.32707928976158 C 789.5833587646484 57.04935891176808 789.5833587646484 57.04935891176808 947.5000305175781 47.49083546610349 C 1105.4167022705078 37.9323120204389 1105.4167022705078 37.9323120204389 1263.3333740234375 55.32707928976158 L 1263.3333740234375 3807.4375 L 0 3807.4375 Z" fill="#AA132D"></path></svg>
+	<div id="jarallax-container-0" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; overflow: hidden; pointer-events: none; z-index: -100;"><div style="background-position: 50% 50%; background-size: cover; background-repeat: no-repeat; background-image: url(); position: fixed; top: 0px; left: 0px; width: 1263.33px; height: 611.333px; overflow: hidden; pointer-events: none; margin-top: -0.666672px; transform: translate3d(0px, 62.849px, 0px); display: none;"></div></div></div>
+	<section class="service bg-dark-grad all-text-white" style="margin-top: -70px;">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 col-lg-8 mt-2 mx-auto">
+					<div class="title text-center">
+						<h2>Our service</h2>
+						<p class="mb-0">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque, veniam!</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4 mt-30">
+					<div class="feature-box f-style-2 icon-grad h-100">
+						<div class="feature-box-icon"><i class="ti-save-alt"></i></div>
+						<h3 class="feature-box-title">Consulting</h3>
+						<p class="feature-box-desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum quaerat corrupti, dolore vero at accusantium?</p>
+						<a class="mt-3" href="#">Know more!</a>
+					</div>
+				</div>
+				<div class="col-md-4 mt-30">
+					<div class="feature-box f-style-2 icon-grad h-100">
+						<div class="feature-box-icon"><i class="ti-ruler-pencil"></i></div>
+						<h3 class="feature-box-title">Trainings</h3>
+						<p class="feature-box-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure reiciendis, fugiat perspiciatis sequi ut vero quisquam dolorem sunt rerum itaque.</p>
+						<a class="mt-3" href="#">Know more!</a>
+					</div>
+				</div>
+				<div class="col-md-4 mt-30">
+					<div class="feature-box f-style-2 icon-grad h-100">
+						<div class="feature-box-icon"><i class="ti-agenda"></i></div>
+						<h3 class="feature-box-title">Product Development</h3>
+						<p class="feature-box-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, dolorum nisi ipsum praesentium ipsam quae ex!</p>
+						<a class="mt-3" href="#">Know more!</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="about-newsletter bg-overlay-dark-8 parallax-bg" style="background: none center center / cover;" data-jarallax-original-styles="background:url(images/section-banner.jpg) center center; background-size:cover; ">
 		<div class="container">
 			<div class="row">
 				<div class="col-12 col-lg-8 mx-auto">
 					<div class="title title-light text-center">
-						<span class="pre-title">Manalytica</span>
 						<h2>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus labore quisquam sunt delectus, recusandae facere, assumenda saepe iusto, quos esse placeat fuga ex rem dolorem consectetur tempora quasi quam excepturi.</h2>
 					</div>
 				</div>
@@ -127,26 +182,27 @@
 			</div>
 		</div>
 	<div id="jarallax-container-1" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; overflow: hidden; pointer-events: none; z-index: -100;">
-		<div style="background-position: 50% 50%; background-size: cover; background-repeat: no-repeat; background-image: url(&quot;https://wizixo.webestica.com/assets/images/bg/03.jpg&quot;); position: fixed; top: 0px; left: 0px; width: 1423.33px; height: 628.396px; overflow: hidden; pointer-events: none; margin-top: 135.802px; transform: translate3d(0px, -16.276px, 0px);">
+		<div style="background-position: 50% 50%; background-size: cover; background-repeat: no-repeat; background-image: url(images/section-banner.jpg); position: fixed; top: 0px; left: 0px; width: 1423.33px; height: 728.396px; overflow: hidden; pointer-events: none; margin-top: 135.802px; transform: translate3d(0px, -16.276px, 0px);">
 		</div>
 	</div>
 </section>
-<section>
+
+<section class="all-text-white">
 	<div class="container">
 		<div class="row justify-content-between align-items-center">
 			<!--left-->
 			<div class="col-lg-6 col-md-12">
 				<div class="title text-left pb-0">
-					<h2>Our<span class="text-primary"> Products</span></h2>
+					<h2>Our Products</h2>
 					<p class="lead">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora natus quam, suscipit dolorem voluptate dolorum soluta deleniti unde similique nulla quia sit illo, eum adipisci ipsam nesciunt delectus earum ea possimus corrupti rem itaque consectetur commodi. Aliquid, architecto fuga. Odit?</p>
-					<a class="btn btn-grad mr-3" href="#">View All</a>
+					<a class="btn  mr-3" href="#">View All</a>
 				</div>
 			</div>
 			<!--right-->
 			<div class="col-md-6">
 				<div class="row mt-4 mt-md-0">
 					<div class="col-7 pl-4 pr-2 mb-3">
-						<img class="border-radius-3 feature-box f-style-5 wow fadeInLeft" data-wow-duration="0.8s" data-wow-delay="0s" src="images/poochohlogo.png" alt="" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0s; animation-name: fadeInLeft;">
+						<img class="border-radius-3  wow fadeInLeft" data-wow-duration="0.8s" data-wow-delay="0s" src="images/poochohlogo.png" alt="" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0s; animation-name: fadeInLeft;">
 					</div>
 					<!-- <div class="col-5 align-self-end pl-2 mb-3">
 						<img class="border-radius-3 wow fadeInDown" data-wow-duration="0.8s" data-wow-delay="0.2s" src="images/poochohlogo.png" alt="" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.2s; animation-name: fadeInDown;">
@@ -162,6 +218,284 @@
 		</div>
 	</div>
 </section>
+
+
+<section class="training all-text-white pb-0" style="margin-top: -80px; margin-bottom: 40%;" >
+	<div class="container">
+		<div class="row">
+			<div class="col-12 col-lg-8 mx-auto">
+				<div class="title text-center">
+					<h2>Our Trainings</h2>
+					<p class="mb-0">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque, veniam!</p>
+				</div>
+			</div>
+			<div class="col-md-12 p-0">
+				<div class="training-wrap grid items-4 items-padding" style="position: relative;">
+					
+					<div class="training-card " style="position: absolute; left: 0px; top: 0px;">
+						<div class="training-card-body">
+							<div class="training-card-header">
+								<img src="images/section-banner.jpg" alt="">
+							</div>
+							<div class="training-card-footer">
+								<a class="full-screen" href=""  data-toggle="modal" data-target="#training1"><i class=""></i></a>
+								<h6 class="info-title"><a href="#" title="">Linux</a></h6>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas?</p>
+							</div>
+						</div>
+					</div>
+					
+					<div class="training-card " style="position: absolute; left: 295px; top: 0px;">
+						<div class="training-card-body">
+							<div class="training-card-header">
+								<img src="images/02.jpg" alt="">
+							</div>
+							<div class="training-card-footer">
+								<a class="full-screen" href="" data-toggle="modal" data-target="#training2" ><i class=""></i></a>
+								<h6 class="info-title"><a href="#" title="">Artificial Intelligence</a></h6>
+								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati!</p>
+							</div>
+						</div>
+					</div>
+					
+					<div class="training-card " style="position: absolute; left: 590px; top: 0px;">
+						<div class="training-card-body">
+							<div class="training-card-header">
+								<img src="images/training (1).jpg" alt="">
+							</div>
+							<div class="training-card-footer">
+								<a class="full-screen" href=""  data-toggle="modal" data-target="#training3"><i class=""></i></a>
+								<h6 class="info-title"><a href="#" title="">Power BI</a></h6>
+								<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim.</p>
+							</div>
+						</div>
+					</div>
+					
+					<div class="training-card " style="position: absolute; left: 885px; top: 0px;">
+						<div class="training-card-body">
+							<div class="training-card-header">
+								<img src="images/training (2).jpg" alt="">
+							</div>
+							<div class="training-card-footer">
+								<a class="full-screen" href=""  data-toggle="modal" data-target="#training4"><i class=""></i></a>
+								<h6 class="info-title"><a href="#" title="">AI</a></h6>
+								<p>Deep learning & Machine learning</p>
+							</div>
+						</div>
+					</div>
+				
+				</div>
+				
+			</div>
+		</div>
+	</div>
+</section>
+
+
+		<!-- Modal 1-->
+		<div class="modal mt-5 fade text-left" id="training2" tabindex="-1" aria-labelledby="training2" style="display: none; " aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="">Apply For Training</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">×</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div class="col-md-12">
+							<div class="row">
+								<div class="form-group col-md-6">
+									<label>Name</label>
+									<input class="form-control" type="text" placeholder="Name">
+								</div>
+								<div class="form-group col-md-6">
+									<label>Mobile</label>
+									<input class="form-control" type="text" placeholder="Mobile">
+								</div>
+							</div>
+							<div class="form-group">
+								<label>Email</label>
+								<input class="form-control" type="email" placeholder="Email">
+							</div>
+		
+							<div class="form-group">
+								<label>Training</label>
+								<select class="custom-select select-big mb-3">
+									<option selected="">Artificial Intelligence</option>
+									
+								</select>
+							</div>
+						</div>	
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary">Apply</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Modal 2-->
+		<div class="modal mt-5 fade text-left" id="training1" tabindex="-1" aria-labelledby="training2" style="display: none; " aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="">Apply For Training</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">×</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div class="col-md-12">
+							<div class="row">
+								<div class="form-group col-md-6">
+									<label>Name</label>
+									<input class="form-control" type="text" placeholder="Name">
+								</div>
+								<div class="form-group col-md-6">
+									<label>Mobile</label>
+									<input class="form-control" type="text" placeholder="Mobile">
+								</div>
+							</div>
+							<div class="form-group">
+								<label>Email</label>
+								<input class="form-control" type="email" placeholder="Email">
+							</div>
+		
+							<div class="form-group">
+								<label>Training</label>
+								<select class="custom-select select-big mb-3">
+									<option selected="">Linux</option>
+									
+								</select>
+							</div>
+						</div>	
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary">Apply</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Modal 3-->
+		<div class="modal mt-5 fade text-left" id="training3" tabindex="-1" aria-labelledby="training2" style="display: none; " aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="">Apply For Training</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">×</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div class="col-md-12">
+							<div class="row">
+								<div class="form-group col-md-6">
+									<label>Name</label>
+									<input class="form-control" type="text" placeholder="Name">
+								</div>
+								<div class="form-group col-md-6">
+									<label>Mobile</label>
+									<input class="form-control" type="text" placeholder="Mobile">
+								</div>
+							</div>
+							<div class="form-group">
+								<label>Email</label>
+								<input class="form-control" type="email" placeholder="Email">
+							</div>
+		
+							<div class="form-group">
+								<label>Training</label>
+								<select class="custom-select select-big mb-3">
+									<option selected="">Power BI</option>
+									
+								</select>
+							</div>
+						</div>	
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary">Apply</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Modal 4-->
+		<div class="modal mt-5 fade text-left" id="training4" tabindex="-1" aria-labelledby="training2" style="display: none; " aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="">Apply For Training</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">×</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div class="col-md-12">
+							<div class="row">
+								<div class="form-group col-md-6">
+									<label>Name</label>
+									<input class="form-control" type="text" placeholder="Name">
+								</div>
+								<div class="form-group col-md-6">
+									<label>Mobile</label>
+									<input class="form-control" type="text" placeholder="Mobile">
+								</div>
+							</div>
+							<div class="form-group">
+								<label>Email</label>
+								<input class="form-control" type="email" placeholder="Email">
+							</div>
+		
+							<div class="form-group">
+								<label>Training</label>
+								<select class="custom-select select-big mb-3">
+									<option selected="">AI</option>
+									
+								</select>
+							</div>
+						</div>	
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary">Apply</button>
+					</div>
+				</div>
+			</div>
+		</div>
+<footer class="footer footer-dark" style="background-color: #070606;">
+	<div class="footer-content">
+		<div class="container">
+			<div class="row">
+				<!-- Footer widget 1 -->
+				<div class="col-md-8 mx-auto">
+					<div class="widget text-center mt-5">
+						
+						<p class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam ut vitae officia. Eum consectetur adipisci dicta blanditiis enim facilis temporibus</p>
+						<!-- contact info -->
+						<ul class="p-0 list-inline">
+							<li class="list-inline-item mr-4"><i class="fas fa-map-marker-alt"></i> 1421 street, ABC Colony </li>
+							<li class="list-inline-item mr-4"><i class="fas fa-headset"></i> <a href="tel:+"> 123 123 1234 </a></li>
+							<li class="list-inline-item mr-4"><i class="fas fa-map-marker-alt"></i> <a href="mailto:">contact@gmail.com</a> </li>
+						</ul>
+						<div class="divider my-3"></div>
+						<!-- footer links -->
+						<div class="copyright-links my-2">
+							<ul class="list-inline">
+								<li class="list-inline-item pl-2"><a class="list-group-item-action" href="#">Products</a></li>
+								<li class="list-inline-item pl-2"><a class="list-group-item-action" href="#">Services</a></li>
+								<li class="list-inline-item pl-2"><a class="list-group-item-action" href="#">Trainings</a></li>
+								<li class="list-inline-item pl-2"><a class="list-group-item-action" href="#">Privacy Policy</a></li>
+								<li class="list-inline-item pl-2"><a class="list-group-item-action pr-0" href="#">Use of terms</a></li>
+							</ul>
+						</div>
+						<!-- copyright text -->
+						<div class="copyright-text">©2021 All Rights Reserved </a></div>
+					</div>
+				</div>
+
+				<!-- Footer widget 4 -->
+			</div>
+		</div>
+	</div>
+</footer>
 	<!-- <div> <a href="" class="back-top btn btn-grad"><i class="ti-angle-up"></i></a> </div> -->
 
 	<!--Global JS-->

@@ -13,7 +13,7 @@ Brand dark color: #e76508
 .bg-brand, .bg-grad::-moz-selection { color: #ff6a00; background: #fff; }
 
 /* Color */
-a, .navbar-top a:hover, .dropdown-item:active, .navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus, .btn-link, .portfolio-card .portfolio-card-body .portfolio-card-footer .info-title a:hover, .post .post-info a:hover, .navbar-light .navbar-nav .show > .nav-link, .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .nav-link.active, .icon-primary i:before, .footer-dark .widget a:hover, .portfolio .nav .nav-tabs .nav-filter.active, .team-item .team-position, .list-group-item-action:hover, .list-group-item-action:focus, .hamburger-menu label a:hover, .breadcrumb .breadcrumb-item a:hover i, .post-item .post-item-desc .post-meta a:hover, .post-item .post-item-desc h4 a:hover, .post-item .item-link:hover, .post-item .post-quote > blockquote:before, .page-link:hover, .sidebar .widget .widget-post .details a:hover, .sidebar .widget a:hover, .list-group-borderless a.list-group-item:hover, .tags a:hover, .post-navigation .post-prev:hover:before, .post-navigation .post-prev:hover h6, .post-navigation .post-prev:hover p, .post-navigation .post-next:hover:before, .post-navigation .post-next:hover h6, .post-navigation .post-next:hover p, .post-navigation .all-post:hover, .blockquote:before, .btn-outline-grad { color: #ff6a00; }
+a, .navbar-top a:hover, .dropdown-item:active, .navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus, .btn-link, .training-card .training-card-body .training-card-footer .info-title a:hover, .post .post-info a:hover, .navbar-light .navbar-nav .show > .nav-link, .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .nav-link.active, .icon-primary i:before, .footer-dark .widget a:hover, .training .nav .nav-tabs .nav-filter.active, .team-item .team-position, .list-group-item-action:hover, .list-group-item-action:focus, .hamburger-menu label a:hover, .breadcrumb .breadcrumb-item a:hover i, .post-item .post-item-desc .post-meta a:hover, .post-item .post-item-desc h4 a:hover, .post-item .item-link:hover, .post-item .post-quote > blockquote:before, .page-link:hover, .sidebar .widget .widget-post .details a:hover, .sidebar .widget a:hover, .list-group-borderless a.list-group-item:hover, .tags a:hover, .post-navigation .post-prev:hover:before, .post-navigation .post-prev:hover h6, .post-navigation .post-prev:hover p, .post-navigation .post-next:hover:before, .post-navigation .post-next:hover h6, .post-navigation .post-next:hover p, .post-navigation .all-post:hover, .blockquote:before, .btn-outline-grad { color: #ff6a00; }
 
 /* Checkbox */
 .custom-control-input:checked ~ .custom-control-label::before {
@@ -27,7 +27,7 @@ a, .navbar-top a:hover, .dropdown-item:active, .navbar-light .navbar-nav .nav-li
 .list-group-icon-primary-bg i { background-color: #ffd5b8; color: #ff6a00; }
 
 .btn-link:hover, a:hover { color: #e76508; }
-.post .post-tag a:hover, .portfolio-style-2 .portfolio-card .portfolio-card-footer .info-title a:hover, .portfolio .nav .nav-tabs-style-3 .nav-filter.active, .portfolio .nav .nav-tabs-style-2 .nav-filter.active, .portfolio .nav .nav-tabs-style-4 .nav-filter.active { color: #ffffff; }
+.post .post-tag a:hover, .training-style-2 .training-card .training-card-footer .info-title a:hover, .training .nav .nav-tabs-style-3 .nav-filter.active, .training .nav .nav-tabs-style-2 .nav-filter.active, .training .nav .nav-tabs-style-4 .nav-filter.active { color: #ffffff; }
 a.text-primary:hover, a.text-primary:focus, .primary-hover li:hover {
     color: #0361e5 !important;
 }
@@ -78,7 +78,7 @@ a.text-primary:hover, a.text-primary:focus, .primary-hover li:hover {
 .tags a:hover {
     border: 1px solid #ff6a00;
 }
-.portfolio .nav .nav-tabs-style-1 .nav-filter.active { border-color: #ff6a00; }
+.training .nav .nav-tabs-style-1 .nav-filter.active { border-color: #ff6a00; }
 .blockquote.primary-line {
     border-left: 5px solid #ff6a00;
 }
@@ -104,7 +104,7 @@ a.text-primary:hover, a.text-primary:focus, .primary-hover li:hover {
 }
 
 /* Gradient Background */
-.bg-grad, .skill.skill-grad .progress-bar, .nav-tabs.tab-grad .nav-link.active, .portfolio-style-2 .portfolio-card .portfolio-card-header:before, .portfolio-style-2 .portfolio-card:hover .portfolio-card-header:before, .team.team-overlay .team-item .team-avatar:before, .team.team-overlay .team-item:hover .team-avatar:before, .pricing .ribbon span, .portfolio .nav .nav-tabs-style-3 .nav-filter.active, .portfolio .nav .nav-tabs-style-2 .nav-filter.active, .portfolio .nav .nav-tabs-style-4 .nav-filter.active {
+.bg-grad, .skill.skill-grad .progress-bar, .nav-tabs.tab-grad .nav-link.active, .training-style-2 .training-card .training-card-header:before, .training-style-2 .training-card:hover .training-card-header:before, .team.team-overlay .team-item .team-avatar:before, .team.team-overlay .team-item:hover .team-avatar:before, .pricing .ribbon span, .training .nav .nav-tabs-style-3 .nav-filter.active, .training .nav .nav-tabs-style-2 .nav-filter.active, .training .nav .nav-tabs-style-4 .nav-filter.active {
     background: -moz-linear-gradient(150deg, #ff6a00 0%, #ee0979 100%);
     background: -webkit-gradient(linear, left top, right top, color-stop(0%, #ff6a00), color-stop(100%, #ee0979));
     background: -webkit-linear-gradient(150deg, #ff6a00 0%, #ee0979 100%);

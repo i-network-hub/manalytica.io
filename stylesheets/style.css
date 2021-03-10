@@ -1,40 +1,4 @@
 @charset "UTF-8";
-/*!
- * Bootstrap v4.6.0 (https://getbootstrap.com/)
- * Copyright 2011-2021 The Bootstrap Authors
- * Copyright 2011-2021 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
- */
-:root {
-  --blue: #007bff;
-  --indigo: #6610f2;
-  --purple: #6f42c1;
-  --pink: #e83e8c;
-  --red: #dc3545;
-  --orange: #fd7e14;
-  --yellow: #ffc107;
-  --green: #28a745;
-  --teal: #20c997;
-  --cyan: #17a2b8;
-  --white: #fff;
-  --gray: #6c757d;
-  --gray-dark: #343a40;
-  --primary: #4cbd89;
-  --secondary: #8f9397;
-  --success: #28a745;
-  --info: #17a2b8;
-  --warning: #ffc107;
-  --danger: #dc3545;
-  --light: #f7f8f9;
-  --dark: #343a40;
-  --breakpoint-xs: 0;
-  --breakpoint-sm: 576px;
-  --breakpoint-md: 768px;
-  --breakpoint-lg: 992px;
-  --breakpoint-xl: 1200px;
-  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-}
 
 *,
 *::before,
@@ -61,7 +25,14 @@ body {
   line-height: 1.6;
   color: #8f9397;
   text-align: left;
-  background-color: #ffffff;
+  background: -moz-linear-gradient(150deg, #111213 0%, #AA132D 100%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, #111213), color-stop(100%, #AA132D));
+  background: -webkit-linear-gradient(150deg, #111213 0%, #AA132D 100%);
+  background: -o-linear-gradient(150deg, #111213 0%, #AA132D 100%);
+  background: -ms-linear-gradient(150deg, #111213 0%, #AA132D 100%);
+  background: linear-gradient(150deg, #111213 0%, #AA132D 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color-one', endColorstr='$color-two',GradientType=1 );
+
 }
 
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -11057,9 +11028,11 @@ button.bg-dark:focus {
 }
 
 .text-primary {
-  color: #4cbd89 !important;
+  color:  #AA132D !important;
 }
-
+.text-theme {
+  color:  #AA132D !important;
+}
 a.text-primary:hover, a.text-primary:focus {
   color: #338a62 !important;
 }
@@ -11353,8 +11326,8 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .navbar-nav .nav-link {
-  font-size: 0.875rem;
-  font-weight: 500;
+  font-size: 15px;
+  font-weight: 700;
   text-transform: capitalize;
   line-height: 84px;
   padding-top: 0;
@@ -11876,7 +11849,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 /*----------------------------------------------------------------------
-  * Wizixo - Multipurpose Corporate theme
+  
   * General Styles
 ------------------------------------------------------------------------*/
 body {
@@ -12468,12 +12441,12 @@ textarea {
 }
 
 .bg-dark-grad {
-  background: -moz-linear-gradient(150deg, #343a40 0%, #626d78 100%);
-  background: -webkit-gradient(linear, left top, right top, color-stop(0%, #343a40), color-stop(100%, #626d78));
-  background: -webkit-linear-gradient(150deg, #343a40 0%, #626d78 100%);
-  background: -o-linear-gradient(150deg, #343a40 0%, #626d78 100%);
-  background: -ms-linear-gradient(150deg, #343a40 0%, #626d78 100%);
-  background: linear-gradient(150deg, #343a40 0%, #626d78 100%);
+  background: -moz-linear-gradient(150deg, #111213 0%, #AA132D 100%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, #111213), color-stop(100%, #AA132D));
+  background: -webkit-linear-gradient(150deg, #111213 0%, #AA132D 100%);
+  background: -o-linear-gradient(150deg, #111213 0%, #AA132D 100%);
+  background: -ms-linear-gradient(150deg, #111213 0%, #AA132D 100%);
+  background: linear-gradient(150deg, #111213 0%, #AA132D 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$color-one', endColorstr='$color-two',GradientType=1 );
 }
 
@@ -13598,41 +13571,41 @@ footer .widget {
 }
 
 /*===============================
-			   PORTFOLIO 
+			   training 
 =================================*/
 .items-padding {
   margin: 10px;
 }
 
-.items-padding .portfolio-card {
+.items-padding .training-card {
   padding: 10px;
 }
 
-.items-padding-inside .portfolio-card {
+.items-padding-inside .training-card {
   padding: 10px;
 }
 
-.items-2 .portfolio-card {
+.items-2 .training-card {
   width: 50%;
   float: left;
 }
 
-.items-3 .portfolio-card {
+.items-3 .training-card {
   width: 33.3333%;
   float: left;
 }
 
-.items-4 .portfolio-card {
+.items-4 .training-card {
   width: 25%;
   float: left;
 }
 
-.items-5 .portfolio-card {
+.items-5 .training-card {
   width: 20%;
   float: left;
 }
 
-.items-6 .portfolio-card {
+.items-6 .training-card {
   width: 16.6666%;
   float: left;
 }
@@ -13645,37 +13618,37 @@ footer .widget {
   font-size: 1.09375rem;
 }
 
-.portfolio-card {
+.training-card {
   overflow: hidden;
   position: relative;
 }
 
-.portfolio-card .portfolio-card-body {
+.training-card .training-card-body {
   overflow: hidden;
 }
 
-.portfolio-card .portfolio-card-body .portfolio-card-footer .info-title {
+.training-card .training-card-body .training-card-footer .info-title {
   margin-top: 20px;
   margin-bottom: 5px;
-  color: #343a40;
+  color: #fff !important;
   display: block;
 }
 
-.portfolio-card .portfolio-card-body .portfolio-card-footer .info-title a {
-  color: #343a40;
+.training-card .training-card-body .training-card-footer .info-title a {
+  color: #fff !important;
 }
 
-.portfolio-card .portfolio-card-body .portfolio-card-footer .info-title a:hover {
-  color: #4cbd89;
+.training-card .training-card-body .training-card-footer .info-title a:hover {
+  color: #000 !important;
 }
 
-.portfolio-card .portfolio-card-body .portfolio-card-footer .full-screen {
+.training-card .training-card-body .training-card-footer .full-screen {
   visibility: hidden;
   opacity: 0;
   position: absolute;
-  top: 20px;
-  right: 20px;
-  background: #ffffff;
+  top: 30%;
+  right: 45%;
+  background: #0a0a0a;
   color: #343a40;
   border-radius: 50%;
   height: 40px;
@@ -13684,27 +13657,29 @@ footer .widget {
   text-align: center;
 }
 
-.portfolio-card:hover .portfolio-card-body .portfolio-card-footer .full-screen {
+.training-card:hover .training-card-body .training-card-footer .full-screen {
   visibility: visible;
   opacity: 1;
   z-index: 2;
 }
 
-.portfolio-card .portfolio-card-header {
+.training-card .training-card-header {
   overflow: hidden;
   position: relative;
   border-radius: 3px;
 }
 
-.portfolio-card .portfolio-card-header img {
+.training-card .training-card-header img {
   -webkit-transition: all 1s ease-in-out;
   -moz-transition: all 1s ease-in-out;
   -ms-transition: all 1s ease-in-out;
   -o-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
+  height: 230px;
+  width: 280px;
 }
 
-.portfolio-card:hover .portfolio-card-header img {
+.training-card:hover .training-card-header img {
   -ms-transform: scale(1.2);
   -webkit-transform: scale(1.2);
   transform: scale(1.2);
@@ -13720,7 +13695,7 @@ footer .widget {
   filter: blur(3px);
 }
 
-.portfolio-card .portfolio-card-header:before {
+.training-card .training-card-header:before {
   content: '';
   position: absolute;
   top: 0;
@@ -13738,7 +13713,7 @@ footer .widget {
   transition: all 1s ease-in-out;
 }
 
-.portfolio-card:hover .portfolio-card-header:before {
+.training-card:hover .training-card-header:before {
   content: '';
   position: absolute;
   top: 0;
@@ -13750,8 +13725,8 @@ footer .widget {
   background: #343a40;
 }
 
-/*Portfolio style 2*/
-.portfolio-style-2 .portfolio-card .portfolio-card-footer {
+/*training style 2*/
+.training-style-2 .training-card .training-card-footer {
   position: absolute;
   text-align: left;
   right: 30px;
@@ -13769,19 +13744,19 @@ footer .widget {
   transition: all 0.3s ease-in-out;
 }
 
-.portfolio-style-2 .portfolio-card a, .portfolio-style-2 .portfolio-card p {
+.training-style-2 .training-card a, .training-style-2 .training-card p {
   color: #ffffff;
 }
 
-.portfolio-style-2 .portfolio-card a:hover {
+.training-style-2 .training-card a:hover {
   color: #ffffff;
 }
 
-.portfolio-style-2 .portfolio-card .portfolio-card-footer .info-title a:hover {
+.training-style-2 .training-card .training-card-footer .info-title a:hover {
   color: #ffffff;
 }
 
-.portfolio-style-2 .portfolio-card .portfolio-card-footer .full-screen {
+.training-style-2 .training-card .training-card-footer .full-screen {
   background: transparent;
   border: none;
   color: #ffffff;
@@ -13790,13 +13765,13 @@ footer .widget {
   right: -10px;
 }
 
-.portfolio-style-2 .portfolio-card .portfolio-card-footer .info-title a {
+.training-style-2 .training-card .training-card-footer .info-title a {
   color: #ffffff;
   margin-bottom: 10px;
 }
 
-/*Portfolio style 2 normal*/
-.portfolio-style-2 .portfolio-card .portfolio-card-footer .full-screen {
+/*training style 2 normal*/
+.training-style-2 .training-card .training-card-footer .full-screen {
   position: absolute;
   bottom: 60px;
   -webkit-transition: all 1s ease-in-out;
@@ -13808,7 +13783,7 @@ footer .widget {
   visibility: hidden;
 }
 
-.portfolio-style-2 .portfolio-card .portfolio-card-footer .info-title {
+.training-style-2 .training-card .training-card-footer .info-title {
   position: absolute;
   bottom: 10px;
   -webkit-transition: all 0.7s ease-in-out;
@@ -13820,7 +13795,7 @@ footer .widget {
   visibility: hidden;
 }
 
-.portfolio-style-2 .portfolio-card .portfolio-card-footer p {
+.training-style-2 .training-card .training-card-footer p {
   position: absolute;
   bottom: -20px;
   -webkit-transition: all 0.5s ease-in-out;
@@ -13832,14 +13807,14 @@ footer .widget {
   visibility: hidden;
 }
 
-/*Portfolio style 2 hover*/
-.portfolio-style-2 .portfolio-card:hover .portfolio-card-footer {
+/*training style 2 hover*/
+.training-style-2 .training-card:hover .training-card-footer {
   bottom: 0px;
   opacity: 1;
   visibility: visible;
 }
 
-.portfolio-style-2 .portfolio-card:hover .portfolio-card-footer .full-screen {
+.training-style-2 .training-card:hover .training-card-footer .full-screen {
   position: absolute;
   bottom: 90px;
   -webkit-transition: all 0.5s ease-in-out;
@@ -13851,7 +13826,7 @@ footer .widget {
   visibility: visible;
 }
 
-.portfolio-style-2 .portfolio-card:hover .portfolio-card-footer .info-title {
+.training-style-2 .training-card:hover .training-card-footer .info-title {
   position: absolute;
   bottom: 56px;
   -webkit-transition: all 0.7s ease-in-out;
@@ -13863,7 +13838,7 @@ footer .widget {
   visibility: visible;
 }
 
-.portfolio-style-2 .portfolio-card:hover .portfolio-card-footer p {
+.training-style-2 .training-card:hover .training-card-footer p {
   position: absolute;
   bottom: 8px;
   -webkit-transition: all 1s ease-in-out;
@@ -13875,7 +13850,7 @@ footer .widget {
   visibility: visible;
 }
 
-.portfolio-style-2 .portfolio-card .portfolio-card-header {
+.training-style-2 .training-card .training-card-header {
   -webkit-transition: all 1s ease-in-out;
   -moz-transition: all 1s ease-in-out;
   -ms-transition: all 1s ease-in-out;
@@ -13884,7 +13859,7 @@ footer .widget {
   border-radius: 0;
 }
 
-.portfolio-style-2 .portfolio-card:hover .portfolio-card-header {
+.training-style-2 .training-card:hover .training-card-header {
   -ms-transform: scale(1.2);
   -webkit-transform: scale(1.2);
   transform: scale(1.2);
@@ -13895,7 +13870,7 @@ footer .widget {
   transition: all 1s ease-in-out;
 }
 
-.portfolio-style-2 .portfolio-card:hover .portfolio-card-header img {
+.training-style-2 .training-card:hover .training-card-header img {
   -webkit-filter: blur(3px);
   -moz-filter: blur(3px);
   -o-filter: blur(3px);
@@ -13903,7 +13878,7 @@ footer .widget {
   filter: blur(3px);
 }
 
-.portfolio-style-2 .portfolio-card .portfolio-card-header:before {
+.training-style-2 .training-card .training-card-header:before {
   content: '';
   position: absolute;
   top: 0;
@@ -13926,7 +13901,7 @@ footer .widget {
   transition: all 1s ease-in-out;
 }
 
-.portfolio-style-2 .portfolio-card:hover .portfolio-card-header:before {
+.training-style-2 .training-card:hover .training-card-header:before {
   content: '';
   position: absolute;
   top: 0;
@@ -13950,12 +13925,12 @@ footer .widget {
   transition: all 0.5s ease-in-out;
 }
 
-/*portfolio filter*/
-.portfolio .nav .nav-tabs {
+/*training filter*/
+.training .nav .nav-tabs {
   border: none;
 }
 
-.portfolio .nav .nav-tabs .nav-filter {
+.training .nav .nav-tabs .nav-filter {
   font-weight: 500;
   display: inline-block;
   line-height: 15px;
@@ -13965,16 +13940,16 @@ footer .widget {
   color: #343a40;
 }
 
-.portfolio .nav .nav-tabs .nav-filter:last-child {
+.training .nav .nav-tabs .nav-filter:last-child {
   margin-right: 0;
 }
 
-.portfolio .nav .nav-tabs .nav-filter.active {
+.training .nav .nav-tabs .nav-filter.active {
   color: #4cbd89;
 }
 
 /*nav-tabs-style-1*/
-.portfolio .nav .nav-tabs-style-1 .nav-filter {
+.training .nav .nav-tabs-style-1 .nav-filter {
   padding: 8px 10px;
   font-size: 0.8125rem;
   border-radius: 50px;
@@ -13983,13 +13958,13 @@ footer .widget {
   border-color: transparent;
 }
 
-.portfolio .nav .nav-tabs-style-1 .nav-filter.active {
+.training .nav .nav-tabs-style-1 .nav-filter.active {
   color: #4cbd89;
   border-color: #4cbd89;
 }
 
 /*nav-tabs-style-2*/
-.portfolio .nav .nav-tabs-style-2 .nav-filter {
+.training .nav .nav-tabs-style-2 .nav-filter {
   margin-right: 10px;
   padding: 12px 20px;
   font-size: 0.8125rem;
@@ -13997,7 +13972,7 @@ footer .widget {
   background: #f0f1f3;
 }
 
-.portfolio .nav .nav-tabs-style-2 .nav-filter.active {
+.training .nav .nav-tabs-style-2 .nav-filter.active {
   color: #ffffff;
   background: -moz-linear-gradient(150deg, #97c74e 0%, #2ab9a5 100%);
   background: -webkit-gradient(linear, left top, right top, color-stop(0%, #97c74e), color-stop(100%, #2ab9a5));
@@ -14009,14 +13984,14 @@ footer .widget {
 }
 
 /*nav-tabs-style-3*/
-.portfolio .nav .nav-tabs-style-3 {
+.training .nav .nav-tabs-style-3 {
   border: solid 2px rgba(0, 0, 0, 0.1);
   display: inline-block;
   width: auto;
   border-radius: 40px;
 }
 
-.portfolio .nav .nav-tabs-style-3 .nav-filter {
+.training .nav .nav-tabs-style-3 .nav-filter {
   margin-right: 10px;
   padding: 12px 20px;
   font-size: 0.8125rem;
@@ -14025,7 +14000,7 @@ footer .widget {
   margin-bottom: 0;
 }
 
-.portfolio .nav .nav-tabs-style-3 .nav-filter.active {
+.training .nav .nav-tabs-style-3 .nav-filter.active {
   border-radius: 40px;
   color: #ffffff;
   background: -moz-linear-gradient(150deg, #97c74e 0%, #2ab9a5 100%);
@@ -14038,7 +14013,7 @@ footer .widget {
 }
 
 /*nav-tabs-style-4*/
-.portfolio .nav .nav-tabs-style-4 {
+.training .nav .nav-tabs-style-4 {
   background: #343a40;
   padding: 5px;
   display: inline-block;
@@ -14046,7 +14021,7 @@ footer .widget {
   border-radius: 40px;
 }
 
-.portfolio .nav .nav-tabs-style-4 .nav-filter {
+.training .nav .nav-tabs-style-4 .nav-filter {
   color: #ffffff;
   margin-right: 10px;
   padding: 12px 20px;
@@ -14056,7 +14031,7 @@ footer .widget {
   margin-bottom: 0;
 }
 
-.portfolio .nav .nav-tabs-style-4 .nav-filter.active {
+.training .nav .nav-tabs-style-4 .nav-filter.active {
   border-radius: 40px;
   color: #ffffff;
   background: -moz-linear-gradient(150deg, #97c74e 0%, #2ab9a5 100%);
@@ -14069,24 +14044,24 @@ footer .widget {
 }
 
 /*===============================
-			 INDEX PORTFOLIO
+			 INDEX training
 =================================*/
-.personal-portfolio .portfolio-info {
+.personal-training .training-info {
   position: absolute;
   bottom: 0;
   left: 0;
 }
 
-.personal-portfolio .portfolio {
+.personal-training .training {
   margin-left: -10px;
   margin-right: -10px;
 }
 
-.personal-portfolio .personal-portfolio-main {
+.personal-training .personal-training-main {
   padding: 0 6rem;
 }
 
-.personal-portfolio .personal-portfolio-profile {
+.personal-training .personal-training-profile {
   position: fixed;
   top: 0;
   left: 0;
@@ -14095,84 +14070,84 @@ footer .widget {
   bottom: 0;
 }
 
-.personal-portfolio .portfolio .nav .nav-tabs .nav-filter:first-child {
+.personal-training .training .nav .nav-tabs .nav-filter:first-child {
   padding-left: 0;
 }
 
 @media (max-width: 1199.98px) {
-  .items-6 .portfolio-card, .items-5 .portfolio-card {
+  .items-6 .training-card, .items-5 .training-card {
     width: 25%;
   }
-  /*home personal portfolio*/
-  .personal-portfolio .personal-portfolio-main {
+  /*home personal training*/
+  .personal-training .personal-training-main {
     padding: 0 2rem;
   }
-  .personal-portfolio .items-2 .portfolio-card, .personal-portfolio .items-3 .portfolio-card, .personal-portfolio .items-4 .portfolio-card, .personal-portfolio .items-5 .portfolio-card {
+  .personal-training .items-2 .training-card, .personal-training .items-3 .training-card, .personal-training .items-4 .training-card, .personal-training .items-5 .training-card {
     width: 50%;
   }
 }
 
 @media (max-width: 991.98px) {
-  .portfolio .portfolio-style-2 .portfolio-card .portfolio-card-footer {
+  .training .training-style-2 .training-card .training-card-footer {
     padding: 20px;
   }
-  .portfolio-card .portfolio-card-footer .info-title a {
+  .training-card .training-card-footer .info-title a {
     font-size: 1.09375rem;
   }
-  .portfolio-card:hover .portfolio-card-footer p {
+  .training-card:hover .training-card-footer p {
     margin-bottom: 0;
   }
-  .portfolio-card:hover .portfolio-card-footer .info-title {
+  .training-card:hover .training-card-footer .info-title {
     bottom: 30px;
   }
-  .personal-portfolio .personal-portfolio-main {
+  .personal-training .personal-training-main {
     padding: 0rem;
   }
 }
 
 @media (max-width: 767.98px) {
-  .items-2 .portfolio-card, .items-3 .portfolio-card, .items-4 .portfolio-card, .items-5 .portfolio-card {
+  .items-2 .training-card, .items-3 .training-card, .items-4 .training-card, .items-5 .training-card {
     width: 50%;
   }
-  .items-6 .portfolio-card {
+  .items-6 .training-card {
     width: 33.333333%;
   }
-  .personal-portfolio .personal-portfolio-profile {
+  .personal-training .personal-training-profile {
     position: relative;
   }
-  .personal-portfolio .portfolio-info {
+  .personal-training .training-info {
     position: relative;
     padding-top: 300px !important;
   }
-  .portfolio .nav .nav-tabs-style-3 {
+  .training .nav .nav-tabs-style-3 {
     border: none;
   }
-  .portfolio .portfolio-style-2 .portfolio-card .portfolio-card-footer {
+  .training .training-style-2 .training-card .training-card-footer {
     padding: 20px;
   }
 }
 
 @media (max-width: 575.98px) {
-  .items-2 .portfolio-card, .items-3 .portfolio-card, .items-4 .portfolio-card, .items-5 .portfolio-card, .items-6 .portfolio-card {
+  .items-2 .training-card, .items-3 .training-card, .items-4 .training-card, .items-5 .training-card, .items-6 .training-card {
     width: 100%;
   }
-  .personal-portfolio .items-2 .portfolio-card, .personal-portfolio .items-3 .portfolio-card, .personal-portfolio .items-4 .portfolio-card, .personal-portfolio .items-5 .portfolio-card, .personal-portfolio .items-6 .portfolio-card {
+  .personal-training .items-2 .training-card, .personal-training .items-3 .training-card, .personal-training .items-4 .training-card, .personal-training .items-5 .training-card, .personal-training .items-6 .training-card {
     width: 100%;
   }
-  .portfolio-card .portfolio-card-footer .info-title a {
+  .training-card .training-card-footer .info-title a {
     font-size: 1.09375rem;
   }
-  .portfolio-card:hover .portfolio-card-footer .info-title {
+  .training-card:hover .training-card-footer .info-title {
     bottom: 50px;
   }
-  .portfolio-card:hover .portfolio-card-footer p {
+  .training-card:hover .training-card-footer p {
     margin-bottom: 20px;
   }
-  .personal-portfolio .items-padding-inside .portfolio-card {
+  .personal-training .items-padding-inside .training-card {
     padding-left: 0;
     padding-right: 0;
   }
-  .personal-portfolio .portfolio {
+  .personal-training .training {
     margin: 0px;
   }
 }
@@ -14919,10 +14894,10 @@ footer .widget {
 }
 
 .ColorSwitcher button.ColorSwitcher__switch:nth-child(4) {
-  background: #ff6a00;
-  background: -webkit-linear-gradient(150deg, #ee0979, #ff6a00);
-  background: -moz-linear-gradient(150deg, #ee0979, #ff6a00);
-  background: linear-gradient(150deg, #ee0979, #ff6a00);
+  background:  #AA132D;
+  background: -webkit-linear-gradient(150deg, #ee0979,  #AA132D);
+  background: -moz-linear-gradient(150deg, #ee0979,  #AA132D);
+  background: linear-gradient(150deg, #ee0979,  #AA132D);
 }
 
 .ColorSwitcher button.ColorSwitcher__switch:nth-child(5) {

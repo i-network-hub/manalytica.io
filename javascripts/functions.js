@@ -1,7 +1,4 @@
 /**
- * Wizixo - Multipurpose Corporate Theme
- *
- * @author Webestica (https://www.webestica.com/)
  * @version 1.2.0
  */
 
@@ -10,7 +7,7 @@
 ======================
 01 PRELOADER
 02 COUNTER
-03 PORTFOLIO ISOTOPE
+03 training ISOTOPE
 04 WOW
 05 OWL CAROUSEL
 06 SWIPER SLIDER
@@ -60,10 +57,10 @@
     }();
     // END: Counter
 
-    // BEGIN: 03 Portfolio Isotope
-    var portfolioIsotope = function() {
+    // BEGIN: 03 training Isotope
+    var trainingIsotope = function() {
         if ( $().isotope ) {
-            var $container = $('.portfolio-wrap');
+            var $container = $('.training-wrap');
             $container.imagesLoaded(function(){
                 $container.isotope({
                     itemSelector: '.isotope-item',
@@ -79,7 +76,7 @@
             });
         }
     };
-    // END: Portfolio Isotope
+    // END: training Isotope
 
     // BEGIN: 04 Wow
     var wow = function() {
@@ -272,7 +269,7 @@
                   height: 60,
                   bones: 5,
                   amplitude: 20,
-                  color: '#fff',
+                  color: '#000',
                   speed: .15
           });
         }
@@ -282,7 +279,7 @@
                 height: 40,
                 bones: 4,
                 amplitude: 20,
-                color: 'rgba(255, 255, 255, .8)',
+                color: '#111213bb',
                 speed: .25
             });
         }
@@ -387,7 +384,7 @@
     $(document).ready(function () {
           stickyHeader();
           CountTo.init();
-          portfolioIsotope();
+          trainingIsotope();
           owlCarousel();
           swiperSlider();
           wow();
