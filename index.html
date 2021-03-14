@@ -20,7 +20,9 @@
 	<!-- Theme CSS -->
 	<link rel="stylesheet" type="text/css" href="stylesheets/style.css">
 
-<link rel="stylesheet"  href="stylesheets/sunset.css">
+	<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
 <script type="text/javascript" id="www-widgetapi-script" src="javascripts/www-widgetapi.js" async=""></script>
 <script src="javascripts/iframe_api.js"></script>
 <style type="text/css" id="jarallax-clip-1">
@@ -54,7 +56,29 @@
   min-height:100%;
   min-width:100%;
 }
+.fullscreen-video-wrap-2{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:50vh;
+  overflow:hidden;
+}
 
+.fullscreen-video-wrap-2 video{
+  min-height:300px;
+  min-width:100%;
+}
+.header-overlay-2 {
+  height:50vh !important;
+  position: absolute;
+  top:0;
+  left:0;
+  width:100vw;
+  z-index:1;
+  background:#f74c40;
+  opacity:0.3;
+}
 .header-overlay{
   height:100vh;
   position: absolute;
@@ -66,7 +90,27 @@
   opacity:0.3;
 }
 
+.service a:hover{
+	color: #242424;
+}
+.carousel {
+	margin-left: 60px;
+	margin-right: 60px;
+}
+.carousel-cell {
+  width: 32%;
+  height: auto;
+  counter-increment: carousel-cell;
+  text-align: center;
+}
+.carousel-cell img{
+	width: 300px;
+	height: 300px;
+}
 
+.flickity-button , .flickity-page-dots{
+  display: none;
+}
 
 
 		</style>
@@ -74,7 +118,7 @@
 
 <body>
 
-	<header class="header-static navbar-sticky navbar-light" >
+	<header class="navbar-sticky navbar-transparent navbar-dark" >
 		
 		<nav class="navbar navbar-expand-lg">
 			<div class="container">
@@ -130,7 +174,8 @@
 		<svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" class="wave"><defs></defs><path id="wave-one" d="M 0 68.59355342317473 C 126.33333740234376 80.14159824375403 126.33333740234376 80.14159824375403 252.66667480468752 74.36757583346439 C 379.00001220703126 68.59355342317473 379.00001220703126 68.59355342317473 505.33334960937503 78.61587834917923 C 631.6666870117188 88.63820327518374 631.6666870117188 88.63820327518374 758.0000244140625 79.85440667714926 C 884.3333618164063 71.0706100791148 884.3333618164063 71.0706100791148 1010.6666992187501 77.65050723973081 C 1137.0000366210938 84.23040440034687 1137.0000366210938 84.23040440034687 1263.3333740234375 79.66690021608713 L 1263.3333740234375 3807.4375 L 0 3807.4375 Z" fill="#AA132D"></path></svg>
 		<svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" class="wave"><defs></defs><path id="wave-two" d="M 0 53.60479966775511 C 157.9166717529297 62.92646229524033 157.9166717529297 62.92646229524033 315.8333435058594 58.265630981497715 C 473.75001525878906 53.6047996677551 473.75001525878906 53.6047996677551 631.6666870117188 55.32707928976158 C 789.5833587646484 57.04935891176808 789.5833587646484 57.04935891176808 947.5000305175781 47.49083546610349 C 1105.4167022705078 37.9323120204389 1105.4167022705078 37.9323120204389 1263.3333740234375 55.32707928976158 L 1263.3333740234375 3807.4375 L 0 3807.4375 Z" fill="#AA132D"></path></svg>
 	<div id="jarallax-container-0" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; overflow: hidden; pointer-events: none; z-index: -100;"><div style="background-position: 50% 50%; background-size: cover; background-repeat: no-repeat; background-image: url(); position: fixed; top: 0px; left: 0px; width: 1263.33px; height: 611.333px; overflow: hidden; pointer-events: none; margin-top: -0.666672px; transform: translate3d(0px, 62.849px, 0px); display: none;"></div></div></div>
-	<section class="service bg-dark-grad all-text-white" style="margin-top: -70px;">
+
+	<section class="service all-text-white py-8" style="margin-top: -70px; background-color: #242424;">
 		<div class="container">
 			<div class="row">
 				<div class="col-12 col-lg-8 mt-2 mx-auto">
@@ -142,52 +187,130 @@
 			</div>
 			<div class="row">
 				<div class="col-md-4 mt-30">
-					<div class="feature-box f-style-2 icon-grad h-100">
-						<div class="feature-box-icon"><i class="ti-save-alt"></i></div>
+					<div class="feature-box f-style-2  h-100">
+						<div class="feature-box-icon"><i class="fas fa-pen-fancy"></i></div>
 						<h3 class="feature-box-title">Consulting</h3>
 						<p class="feature-box-desc">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum quaerat corrupti, dolore vero at accusantium?</p>
-						<a class="mt-3" href="#">Know more!</a>
+						<button class="mt-3 btn btn-link" href="#">Know more!</button>
 					</div>
 				</div>
 				<div class="col-md-4 mt-30">
-					<div class="feature-box f-style-2 icon-grad h-100">
-						<div class="feature-box-icon"><i class="ti-ruler-pencil"></i></div>
+					<div class="feature-box f-style-2  h-100">
+						<div class="feature-box-icon"><i class="fab fa-codepen"></i></div>
 						<h3 class="feature-box-title">Trainings</h3>
 						<p class="feature-box-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure reiciendis, fugiat perspiciatis sequi ut vero quisquam dolorem sunt rerum itaque.</p>
-						<a class="mt-3" href="#">Know more!</a>
+						<button class="mt-3 btn btn-link" href="#">Know more!</button>
 					</div>
 				</div>
 				<div class="col-md-4 mt-30">
-					<div class="feature-box f-style-2 icon-grad h-100">
-						<div class="feature-box-icon"><i class="ti-agenda"></i></div>
+					<div class="feature-box f-style-2  h-100">
+						<div class="feature-box-icon"><i class="fas fa-code"></i></div>
 						<h3 class="feature-box-title">Product Development</h3>
 						<p class="feature-box-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, dolorum nisi ipsum praesentium ipsam quae ex!</p>
-						<a class="mt-3" href="#">Know more!</a>
+						<button class="mt-3 btn btn-link" href="#">Know more!</button>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
-	<section class="about-newsletter bg-overlay-dark-8 parallax-bg" style="background: none center center / cover;" data-jarallax-original-styles="background:url(images/section-banner.jpg) center center; background-size:cover; ">
+	<section class="products" style="background-color: #9a011f;">
+		<div class="row">
+			<div class="col-12 col-lg-8 mt-2 mx-auto">
+				<div class="title all-text-white text-center">
+					<h2>Products & Services</h2>
+					<p class="mb-0">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque, veniam!</p>
+				</div>
+			</div>
+		</div>
+		<div class="carousel" data-flickity='{ "wrapAround": true, "autoPlay": true }'>
+			<div class="carousel-cell" >
+				<img src="images/02.jpg" alt="">
+				<div class="text-center all-text-white">
+					<h5 class="mt-4">Robotics Development</h5>
+					<button class="mt-3 btn btn-outline-white" href="#">Enquire Now</button>
+				</div>
+			</div>
+			<div class="carousel-cell">
+				<img src="images/section-banner.jpg" alt="">
+				<div class="text-center all-text-white">
+					<h5 class="mt-4">Machine Learning Products Development</h5>
+					<button class="mt-3 btn btn-outline-white"  href="#">Enquire Now</button>
+				</div>
+			</div>
+			<div class="carousel-cell">
+				<img src="images/training (2).jpg" alt="">
+				<div class="text-center all-text-white">
+					<h5 class="mt-4">AI Products Development</h5>
+					<button class="mt-3 btn btn-outline-white"  href="#">Enquire Now</button>
+				</div>
+			</div>
+			<div class="carousel-cell">
+				<img src="images/training (1).jpg" alt="">
+				<div class="text-center all-text-white">
+					<h5 class="mt-4">Analytics Dashboard Development</h5>
+					<button class="mt-3 btn btn-outline-white"  href="#">Enquire Now</button>
+				</div>
+			</div>
+			<div class="carousel-cell" >
+				<img src="images/02.jpg" alt="">
+				<div class="text-center all-text-white">
+					<h5 class="mt-4">Embeded Products Development</h5>
+					<button class="mt-3 btn btn-outline-white"  href="#">Enquire Now</button>
+				</div>
+			</div>
+			<div class="carousel-cell">
+				<img src="images/section-banner.jpg" alt="">
+				<div class="text-center all-text-white">
+					<h5 class="mt-4">Big Data Analytics Product Development</h5>
+					<button class="mt-3 btn btn-outline-white"  href="#">Enquire Now</button>
+				</div>
+			</div>
+			<div class="carousel-cell">
+				<img src="images/training (2).jpg" alt="">
+				<div class="text-center all-text-white">
+					<h5 class="mt-4">Data Management</h5>
+					<button class="mt-3 btn btn-outline-white"  href="#">Enquire Now</button>
+				</div>
+			</div>
+			<div class="carousel-cell">
+				<img src="images/training (1).jpg" alt="">
+				<div class="text-center all-text-white">
+					<h5 class="mt-4">Edge Analytics Products Development</h5>
+					<button class="mt-3 btn btn-outline-white"  href="#">Enquire Now</button>
+				</div>
+			</div>
+			<div class="carousel-cell">
+				<img src="images/training (2).jpg" alt="">
+				<div class="text-center all-text-white">
+					<h5 class="mt-4">AR/VR Products Development</h5>
+					<button class="mt-3 btn btn-outline-white"  href="#">Enquire Now</button>
+				</div>
+			</div>
+			<div class="carousel-cell">
+				<img src="images/training (1).jpg" alt="">
+				<div class="text-center all-text-white">
+					<h5 class="mt-4">Blockchian Products Development</h5>
+					<button class="mt-3 btn btn-outline-white"  href="#">Enquire Now</button>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="bg-overlay-dark-8 parallax-bg" style="background: none center center / cover;" data-jarallax-original-styles="background:url(images/section-banner.jpg) center center; background-size:cover; ">
 		<div class="container">
 			<div class="row">
 				<div class="col-12 col-lg-8 mx-auto">
 					<div class="title title-light text-center">
-						<h2>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus labore quisquam sunt delectus, recusandae facere, assumenda saepe iusto, quos esse placeat fuga ex rem dolorem consectetur tempora quasi quam excepturi.</h2>
+						<h4>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita tenetur quasi quam vel, ducimus impedit laborum facilis.</h4>
+					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, maiores doloribus voluptate voluptatem tempora quas, incidunt beatae, fugiat temporibus vitae est corporis placeat vel adipisci? Impedit accusamus blanditiis, ratione nisi quis et dolores nihil eveniet, error, illo culpa repellendus debitis unde consequuntur. Quas recusandae, dolore, adipisci eligendi distinctio fuga pariatur et commodi a exercitationem nesciunt assumenda. Consequuntur vel eius perspiciatis?</p>
 					</div>
-				</div>
-				<div class="col-12 col-md-8 col-lg-5 mx-auto text-center">
-				
 				</div>
 			</div>
 		</div>
-	<div id="jarallax-container-1" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; overflow: hidden; pointer-events: none; z-index: -100;">
-		<div style="background-position: 50% 50%; background-size: cover; background-repeat: no-repeat; background-image: url(images/section-banner.jpg); position: fixed; top: 0px; left: 0px; width: 1423.33px; height: 728.396px; overflow: hidden; pointer-events: none; margin-top: 135.802px; transform: translate3d(0px, -16.276px, 0px);">
-		</div>
-	</div>
-</section>
+	<div id="jarallax-container-1" style="position: absolute; top: 0px; left: 0px; width: 120%; height: 100%; overflow: visible; pointer-events: none; z-index: -100;"><div style="background-position: 50% 50%; background-size: cover; background-repeat: no-repeat; background-image: url(images/section-banner.jpg); position: fixed; top: 0px; left: 0px; width: 1423.33px; height: 628.396px; overflow: visible; pointer-events: none; margin-top: 135.802px; transform: translate3d(0px, -34.276px, 0px);"></div></div></section>
 
-<section class="all-text-white">
+	
+<section class="all-text-white" style="background-color: #9a011f;">
 	<div class="container">
 		<div class="row justify-content-between align-items-center">
 			<!--left-->
@@ -195,32 +318,33 @@
 				<div class="title text-left pb-0">
 					<h2>Our Products</h2>
 					<p class="lead">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora natus quam, suscipit dolorem voluptate dolorum soluta deleniti unde similique nulla quia sit illo, eum adipisci ipsam nesciunt delectus earum ea possimus corrupti rem itaque consectetur commodi. Aliquid, architecto fuga. Odit?</p>
-					<a class="btn  mr-3" href="#">View All</a>
+					<a class="btn btn-outline-white mr-3" href="#">View All</a>
 				</div>
 			</div>
 			<!--right-->
-			<div class="col-md-6">
-				<div class="row mt-4 mt-md-0">
-					<div class="col-7 pl-4 pr-2 mb-3">
-						<img class="border-radius-3  wow fadeInLeft" data-wow-duration="0.8s" data-wow-delay="0s" src="images/poochohlogo.png" alt="" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0s; animation-name: fadeInLeft;">
+			<div class="col-md-6" style="background-color: rgba(29, 25, 25, 0.384); height: 450px;">
+				<div class="row mt-4 mt-md-0 py-5 pl-3 scene" id="scene">
+					
+					<div class="col-5 px-2 mb-3" data-depth="1.00">
+						<img class="border-radius-3 wow fadeInLeft" data-wow-duration="0.8s" data-wow-delay="0s" src="images/section-banner.jpg" alt="" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0s; animation-name: fadeInLeft;">
 					</div>
-					<!-- <div class="col-5 align-self-end pl-2 mb-3">
-						<img class="border-radius-3 wow fadeInDown" data-wow-duration="0.8s" data-wow-delay="0.2s" src="images/poochohlogo.png" alt="" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.2s; animation-name: fadeInDown;">
+					<div class="col-5 align-self-end" data-depth="0.60">
+						<img class="border-radius-3 wow fadeInDown" style="position:absolute; top:90px; left:300px" data-wow-duration="0.8s" data-wow-delay="0.2s" src="images/training (2).jpg" alt="" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.2s; animation-name: fadeInDown;">
 					</div>
-					<div class="col-5 offset-1 px-2 mb-3">
-						<img class="border-radius-3 wow fadeInUp" data-wow-duration="0.8s" data-wow-delay="0.4s" src="images/poochohlogo.png" alt="" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.4s; animation-name: fadeInUp;">
+					<div class="col-5 offset-1 px-2 mb-3" data-depth="0.40">
+						<img class="border-radius-3 wow fadeInUp" style="position: absolute; left: 280px; top: 250px;" data-wow-duration="0.8s" data-wow-delay="0.4s" src="images/section-banner.jpg" alt="" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.4s; animation-name: fadeInUp;">
 					</div>
-					<div class="col-5 px-2 mb-3">
-						<img class="border-radius-3 wow fadeInRight" data-wow-duration="0.8s" data-wow-delay="0.6s" src="images/poochohlogo.png" alt="" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.6s; animation-name: fadeInRight;">
-					</div> -->
+					<div class="col-5 px-2 mb-3" data-depth="0.80" >
+						<img class="border-radius-3 wow fadeInRight" style="position: absolute; left: 60px; top: 230px;" data-wow-duration="0.8s" data-wow-delay="0.6s" src="images/training (2).jpg" alt="" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0.6s; animation-name: fadeInRight;">
+					</div>
+				
 				</div>
 			</div>
 		</div>
 	</div>
 </section>
 
-
-<section class="training all-text-white pb-0" style="margin-top: -80px; margin-bottom: 40%;" >
+<section class="training all-text-white pb-0" style="margin-bottom: 40%;" >
 	<div class="container">
 		<div class="row">
 			<div class="col-12 col-lg-8 mx-auto">
@@ -238,7 +362,7 @@
 								<img src="images/section-banner.jpg" alt="">
 							</div>
 							<div class="training-card-footer">
-								<a class="full-screen" href=""  data-toggle="modal" data-target="#training1"><i class=""></i></a>
+								<a class="full-screen" href=""  data-toggle="modal" data-target="#training1"><i class="fas fa-paper-plane" style="color: #9a011f;"></i></a>
 								<h6 class="info-title"><a href="#" title="">Linux</a></h6>
 								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas?</p>
 							</div>
@@ -251,7 +375,7 @@
 								<img src="images/02.jpg" alt="">
 							</div>
 							<div class="training-card-footer">
-								<a class="full-screen" href="" data-toggle="modal" data-target="#training2" ><i class=""></i></a>
+								<a class="full-screen" href="" data-toggle="modal" data-target="#training2" ><i class="fas fa-paper-plane" style="color: #9a011f;"></i></a>
 								<h6 class="info-title"><a href="#" title="">Artificial Intelligence</a></h6>
 								<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati!</p>
 							</div>
@@ -264,7 +388,7 @@
 								<img src="images/training (1).jpg" alt="">
 							</div>
 							<div class="training-card-footer">
-								<a class="full-screen" href=""  data-toggle="modal" data-target="#training3"><i class=""></i></a>
+								<a class="full-screen" href=""  data-toggle="modal" data-target="#training3"><i class="fas fa-paper-plane" style="color: #9a011f;"></i></a>
 								<h6 class="info-title"><a href="#" title="">Power BI</a></h6>
 								<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim.</p>
 							</div>
@@ -277,7 +401,7 @@
 								<img src="images/training (2).jpg" alt="">
 							</div>
 							<div class="training-card-footer">
-								<a class="full-screen" href=""  data-toggle="modal" data-target="#training4"><i class=""></i></a>
+								<a class="full-screen" href=""  data-toggle="modal" data-target="#training4"><i class="fas fa-paper-plane" style="color: #9a011f;"></i></a>
 								<h6 class="info-title"><a href="#" title="">AI</a></h6>
 								<p>Deep learning & Machine learning</p>
 							</div>
@@ -460,7 +584,25 @@
 				</div>
 			</div>
 		</div>
-<footer class="footer footer-dark" style="background-color: #070606;">
+
+
+		<div class="innerpage-banner py-7">
+			<div class="fullscreen-video-wrap-2 bg-dark-grad">
+				<video src="vs.mp4" autoplay="true" loop="true" muted></video>
+			</div>
+			<div class="header-overlay-2"></div>
+			<div class="container text-center">
+				<div class="col-md-12">
+					<div class="all-text-white ">
+						<h1 class="innerpage-title">Join Us Now!</h1>
+						<h6 class="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et perspiciatis praesentium maxime quam iste dolorem animi fuga ullam facere at.</h6>
+						<button type="button" href="contact.html" class="mt-4 btn btn-primary">Contact Now</button>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+<footer class="footer all-text-white">
 	<div class="footer-content">
 		<div class="container">
 			<div class="row">
@@ -475,14 +617,18 @@
 							<li class="list-inline-item mr-4"><i class="fas fa-headset"></i> <a href="tel:+"> 123 123 1234 </a></li>
 							<li class="list-inline-item mr-4"><i class="fas fa-map-marker-alt"></i> <a href="mailto:">contact@gmail.com</a> </li>
 						</ul>
-						<div class="divider my-3"></div>
+						<ul class="p-2 mt-3 list-inline">
+							<li class="list-inline-item mr-4"><a class="list-group-item-action" href="#"><i class="fab fa-instagram"></i></a></li>
+							<li class="list-inline-item mr-4"><a class="list-group-item-action" href="#"><i class="fab fa-facebook-f"></i></a></li>
+							<li class="list-inline-item mr-4"><a class="list-group-item-action" href="#"><i class="fab fa-linkedin-in"></i></a></li>
+						</ul>
 						<!-- footer links -->
-						<div class="copyright-links my-2">
+						<div class="copyright-links my-2 mt-3">
 							<ul class="list-inline">
-								<li class="list-inline-item pl-2"><a class="list-group-item-action" href="#">Products</a></li>
-								<li class="list-inline-item pl-2"><a class="list-group-item-action" href="#">Services</a></li>
-								<li class="list-inline-item pl-2"><a class="list-group-item-action" href="#">Trainings</a></li>
-								<li class="list-inline-item pl-2"><a class="list-group-item-action" href="#">Privacy Policy</a></li>
+								<li class="list-inline-item pl-2"><a class="list-group-item-action" href="#">Products</a>&nbsp; &nbsp; |</li>
+								<li class="list-inline-item pl-2"><a class="list-group-item-action" href="#">Services</a>&nbsp; &nbsp; |</li>
+								<li class="list-inline-item pl-2"><a class="list-group-item-action" href="#">Trainings</a>&nbsp; &nbsp; |</li>
+								<li class="list-inline-item pl-2"><a class="list-group-item-action" href="#">Privacy Policy</a>&nbsp; &nbsp; |</li>
 								<li class="list-inline-item pl-2"><a class="list-group-item-action pr-0" href="#">Use of terms</a></li>
 							</ul>
 						</div>
@@ -496,9 +642,16 @@
 		</div>
 	</div>
 </footer>
-	<!-- <div> <a href="" class="back-top btn btn-grad"><i class="ti-angle-up"></i></a> </div> -->
 
+	<!-- <div> <a href="" class="back-top btn btn-grad"><i class="ti-angle-up"></i></a> </div> -->
+	<script>
+
+        var scene = document.getElementById('scene');
+        var parallax = new Parallax(scene);
+    
+        </script>
 	<!--Global JS-->
+	<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 	<script src="javascripts/jquery.min.js"></script>
 	<script src="javascripts/popper.min.js"></script>
 	<script src="javascripts/bootstrap.min.js"></script>
