@@ -18561,7 +18561,7 @@ xloading-bar
   bottom: 0;
   height: 3px;
   width: 0;
-  background: #9a011f;
+  background: #ffffff;
   z-index: 2;
   -webkit-transition: width 0.3s -0.1s;
   -moz-transition: width 0.3s -0.1s;
@@ -18587,6 +18587,7 @@ xloading-bar
   opacity: 1;
   top: 0;
 }
+
 
 /* -------------------------------- 
 
@@ -19396,6 +19397,11 @@ xpush
   bottom: 1rem;
   z-index: 99;
 }
+.border-line{
+  border: 1px solid white;
+  padding: 10px;
+  text-align: center;
+}
 @media (max-width:990px){
 	section{
     text-align: center;
@@ -19405,9 +19411,12 @@ xpush
     
   }
   .add{
-    margin-left: -30px;
+    margin-left: -70px !important;
   }
 	.training {
 		text-align: center;
 	}
+  .feature-box-icon{
+    display: none;
+  }
 }

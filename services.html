@@ -15,6 +15,8 @@
         <link rel="stylesheet" type="text/css" href="stylesheets/animate.min.css">
             
         <script src="https://kit.fontawesome.com/ab223b40fc.js"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
     </head>
 
     <body>
@@ -80,14 +82,16 @@
             <div class="container all-text-white h-100">
                 <div class="row">
                     <div class="col-md-12 col-lg-7 align-self-center ">
-                        <div class="title text-left">
-                            <h2>We Are Handfull Of Services</h2>
+                        <div class="title text-left pb-0 cd-headline loading-bar ">
+                            <h2 class="cd-words-wrapper is-loading"> <b class="is-visible">Seekho Virtually</b></h2>
                             <p class="mb-0">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati distinctio, hic pariatur dignissimos eos quae esse ad sit quo voluptatem doloribus? Repudiandae itaque exercitationem quo eius, quas vitae perferendis et.</p>
                         </div>
                     </div>
-                    <div class="col-md-10 col-lg-5 mx-md-auto align-self-center ">
+                    <div class="col-md-10 col-lg-5 mx-md-auto align-self-center scene" id="scene">
+                    <div  data-depth="1.60">
                         <img class="rounded" src="images/02.jpg" alt="">
                     </div>
+                </div>
                 </div>
             </div>
         </section>
@@ -186,11 +190,16 @@
         </div>
     </div>
 </footer>
-
+    <script>
+         var scene = document.getElementById('scene');
+            var parallax = new Parallax(scene);
+    </script>
 	<script src="javascripts/jquery.min.js"></script>
 	<script src="javascripts/bootstrap.min.js"></script>
 	<script src="javascripts/jquery.easing.min.js"></script>
 	<script src="javascripts/functions.js"></script>
+
+    <script src="javascripts/main.js"></script>
 
 </body>
 </html>
