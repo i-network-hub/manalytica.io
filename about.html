@@ -15,7 +15,8 @@
         <link rel="stylesheet" type="text/css" href="stylesheets/animate.min.css">
             
         <script src="https://kit.fontawesome.com/ab223b40fc.js"></script>
-
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+        
     </head>
 
     <body>
@@ -80,16 +81,16 @@
         <section class="contact-page" >
             <div class="container">
                 <div class="row ">
-                    <div class="col-md-5 mb-5">
-                        <div class="innerpage-banner center bg-overlay-dark-4 py-9" style="background:url(images/training\ \(1\).jpg) no-repeat; background-size:cover; background-position: center center;">
+                    <div class="col-md-5 mb-5 scene" id="scene">
+                        <div class="innerpage-banner center bg-overlay-dark-4 py-9" data-depth="0.50" style="background:url(images/training\ \(1\).jpg) no-repeat; background-size:cover; background-position: center center;">
 
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="h-100">
-                        <div class="title all-text-white pt-5 pb-2">
-                            <h2>What Manalytica Is?</h2>
-                        </div>
+                            <div class="title text-left all-text-white pb-2 pt-5 cd-headline loading-bar ">
+                                <h2 class="cd-words-wrapper is-loading"> <b class="is-visible">What Manalytica Is?</b></h2>
+                            </div>
                             <div class="text-white" style="font-size: 16px;">
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate fugiat enim autem alias assumenda beatae accusamus eos ab, quae unde dolore quo impedit fuga qui quod delectus suscipit totam consequatur consequuntur ut dignissimos officiis. Perspiciatis, quidem quae.</p>
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus id tempore accusantium, velit quasi error sint eos cupiditate nemo quod, voluptas rem qui itaque, repellat fugiat sequi at sed dolorum.</p>
@@ -105,16 +106,16 @@
                 <div class="row justify-content-between align-items-center">
                     <!--left-->
                     <div class="col-lg-6 col-md-12">
-                        <div class="title text-left pb-0">
-                            <h2>Our Offerings</h2>
+                        <div class="title text-left pb-0 cd-headline loading-bar ">
+                            <h2 class="cd-words-wrapper is-loading"> <b class="is-visible">Our Offerings</b></h2>
                             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora natus quam, suscipit dolorem voluptate dolorum soluta deleniti unde similique nulla quia sit illo, eum adipisci ipsam nesciunt delectus earum ea possimus corrupti rem itaque consectetur commodi. Aliquid, architecto fuga. Odit?</p>
                         </div>
                     </div>
                     <!--right-->
                     <div class="col-md-6" style="background-color: rgba(29, 25, 25, 0.384);">
-                        <div class="row mt-4 mt-md-0 py-3 scene2" id="scene2">
+                        <div class="row mt-4 mt-md-0 py-3 scene1" id="scene1">
                             
-                            <div class="col-10 m-4 pl-5" >
+                            <div class="col-10 m-4 pl-5" data-depth="1.60" >
                                 <img class="border-radius-3 wow fadeInLeft" data-wow-duration="0.8s" data-wow-delay="0s" src="images/02.jpg" alt="" style="visibility: visible; animation-duration: 0.8s; animation-delay: 0s; animation-name: fadeInLeft;">
                             </div>
                         </div>
@@ -252,9 +253,9 @@
                             <li class="list-inline-item mr-4"><i class="fas fa-at"></i> <a href="mailto:manalyticasolutions@gmail.com">manalyticasolutions@gmail.com</a> </li>
                         </ul>
                         <ul class="p-2 mt-3 list-inline">
-                            <li class="list-inline-item mr-4"><a class="list-group-item-action" href="#"><i class="fab fa-instagram"></i></a></li>
-                            <li class="list-inline-item mr-4"><a class="list-group-item-action" href="#"><i class="fab fa-facebook-f"></i></a></li>
-                            <li class="list-inline-item mr-4"><a class="list-group-item-action" href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                            <li class="list-inline-item mr-4 social"><a href="#"><i class="fab fa-instagram"></i></a></li>
+                            <li class="list-inline-item mr-4 social"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li class="list-inline-item mr-4 social"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
                         </ul>
                         <!-- footer links -->
                         <div class="copyright-links my-2 mt-3">
@@ -267,7 +268,8 @@
                             </ul>
                         </div>
                         <!-- copyright text -->
-                        <div class="copyright-text">©2021 All Rights Reserved </a></div>
+                        <div class="copyright-text mt-4"> <a href="index.html">Manalytica</a> ©2021 All Rights Reserved</div> <br>
+						<div class="copyright-text">Created By <a href="https://inetworkhub.com/" target="_blank" rel="noopener noreferrer">INetwork Hub</a></div>
                     </div>
                 </div>
 
@@ -276,11 +278,21 @@
         </div>
     </div>
 </footer>
+<script>
 
+var scene = document.getElementById('scene');
+    var parallax = new Parallax(scene);
+
+    var scene1 = document.getElementById('scene1');
+    var parallax = new Parallax(scene1);
+
+    </script>
 	<script src="javascripts/jquery.min.js"></script>
 	<script src="javascripts/bootstrap.min.js"></script>
 	<script src="javascripts/jquery.easing.min.js"></script>
 	<script src="javascripts/functions.js"></script>
+
+    <script src="javascripts/main.js"></script>
 
 </body>
 </html>

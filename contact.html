@@ -15,6 +15,7 @@
         <link rel="stylesheet" type="text/css" href="stylesheets/animate.min.css">
             
         <script src="https://kit.fontawesome.com/ab223b40fc.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
         <style>
             .info .feature-box a:hover{
                 color: #fff;
@@ -85,8 +86,8 @@
         <section class="contact-page">
             <div class="container">
                 <div class="row ">
-                    <div class="col-md-5 mb-5">
-                        <div class="innerpage-banner center bg-overlay-dark-4 py-10" style="background:url(images/training\ \(1\).jpg) no-repeat; background-size:cover; background-position: center center;">
+                    <div class="col-md-5 mb-5 scene" id="scene">
+                        <div class="innerpage-banner center bg-overlay-dark-4 py-10" data-depth="0.50" style="background:url(images/training\ \(1\).jpg) no-repeat; background-size:cover; background-position: center center;">
 
                         </div>
                     </div>
@@ -175,9 +176,9 @@
                                     <li class="list-inline-item mr-4"><i class="fas fa-at"></i> <a href="mailto:manalyticasolutions@gmail.com">manalyticasolutions@gmail.com</a> </li>
                                 </ul>
                                 <ul class="p-2 mt-3 list-inline">
-                                    <li class="list-inline-item mr-4"><a class="list-group-item-action" href="#"><i class="fab fa-instagram"></i></a></li>
-                                    <li class="list-inline-item mr-4"><a class="list-group-item-action" href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                    <li class="list-inline-item mr-4"><a class="list-group-item-action" href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                                    <li class="list-inline-item mr-4 social"><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                    <li class="list-inline-item mr-4 social"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                    <li class="list-inline-item mr-4 social"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
                                 </ul>
                                 <!-- footer links -->
                                 <div class="copyright-links my-2 mt-3">
@@ -190,7 +191,8 @@
                                     </ul>
                                 </div>
                                 <!-- copyright text -->
-                                <div class="copyright-text">©2021 All Rights Reserved </a></div>
+                                <div class="copyright-text mt-4"> <a href="index.html">Manalytica</a> ©2021 All Rights Reserved</div> <br>
+						<div class="copyright-text">Created By <a href="https://inetworkhub.com/" target="_blank" rel="noopener noreferrer">INetwork Hub</a></div>
                             </div>
                         </div>
         
@@ -199,6 +201,11 @@
                 </div>
             </div>
         </footer>
+
+        <script>
+            var scene = document.getElementById('scene');
+            var parallax = new Parallax(scene);
+        </script>
 
         <script src="javascripts/jquery.min.js"></script>
         <script src="javascripts/bootstrap.min.js"></script>

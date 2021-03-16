@@ -39,13 +39,25 @@
 				.products-img{
 					display: none;
 				}
+				.service .title h2{
+					margin-top: 55% !important;
+				}
+				.products {
+					width: 92%;
+					margin-left: 14px;
+				}
+				.products p{
+					padding: 0px 20px !important;
+				}
 				.carousel {
 					margin: auto;
+					width: auto;
 				}
 				.carousel-cell{
-					width: 50vh;
+					width: 60vh;
 					height: 80vh;
 				}
+
 				.carousel-cell h5{
 					padding: 0px 20px;
 				}
@@ -55,6 +67,7 @@
 				}
 				
 			}
+			
 			
 		</style>
 	</head>
@@ -105,12 +118,12 @@
 		<!-- Logo Nav End -->
 	</header>
 
-	<div class="innerpage-banner left py-7 parallax-bg" data-jarallax-video="">
+	<div class="innerpage-banner left py-7 parallax-bg"  data-jarallax-video="">
 		<div class="fullscreen-video-wrap bg-dark-grad">
             <video src="vs.mp4" autoplay="true" loop="true" muted></video>
         </div>
 		<div class="header-overlay"></div>
-		<div class="container py-7">
+		<div class="container main-heading py-7">
 			<div class="row all-text-white pb-7">
 				<div class="col-12 col-lg-8">
 					<h1 class="innerpage-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h1>
@@ -122,7 +135,7 @@
 		<svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" class="wave"><defs></defs><path id="wave-two" d="M 0 53.60479966775511 C 157.9166717529297 62.92646229524033 157.9166717529297 62.92646229524033 315.8333435058594 58.265630981497715 C 473.75001525878906 53.6047996677551 473.75001525878906 53.6047996677551 631.6666870117188 55.32707928976158 C 789.5833587646484 57.04935891176808 789.5833587646484 57.04935891176808 947.5000305175781 47.49083546610349 C 1105.4167022705078 37.9323120204389 1105.4167022705078 37.9323120204389 1263.3333740234375 55.32707928976158 L 1263.3333740234375 3807.4375 L 0 3807.4375 Z" fill="#AA132D"></path></svg>
 	<div id="jarallax-container-0" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; overflow: hidden; pointer-events: none; z-index: -100;"><div style="background-position: 50% 50%; background-size: cover; background-repeat: no-repeat; background-image: url(); position: fixed; top: 0px; left: 0px; width: 1263.33px; height: 611.333px; overflow: hidden; pointer-events: none; margin-top: -0.666672px; transform: translate3d(0px, 62.849px, 0px); display: none;"></div></div></div>
 
-	<section class="service all-text-white py-8" style="margin-top: -70px; background-color: #242424;">
+	<section class="service all-text-white py-6" style="background-color: #242424;">
 		<div class="container">
 			<div class="row">
 				<div class="col-12 col-lg-8 mt-2 mx-auto">
@@ -265,8 +278,8 @@
 		<div class="row justify-content-between align-items-center">
 			<!--left-->
 			<div class="col-lg-6 col-md-12">
-				<div class="title text-left pb-0">
-					<h2>Our Products</h2>
+				<div class="title text-left pb-0 cd-headline loading-bar ">
+					<h2 class="cd-words-wrapper is-loading"> <b class="is-visible">Our Products</b></h2>
 					<p class="lead">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora natus quam, suscipit dolorem voluptate dolorum soluta deleniti unde similique nulla quia sit illo, eum adipisci ipsam nesciunt delectus earum ea possimus corrupti rem itaque consectetur commodi. Aliquid, architecto fuga. Odit?</p>
 					<a class="btn btn-outline-white mr-3" href="products.html">View All</a>
 				</div>
@@ -587,19 +600,26 @@
 		</div>
 
 
-		<div class="innerpage-banner py-7">
+		<div class="innerpage-banner base-header py-7">
 			<div class="fullscreen-video-wrap-2 bg-dark-grad">
 				<video src="vs.mp4" autoplay="true" loop="true" muted></video>
 			</div>
 			<div class="header-overlay-2"></div>
-			<div class="container text-center align-self-center" style="z-index: 10; position: absolute;">
-				<div class="col-md-12">
-					<div class="all-text-white" style="margin-left:150px;">
-						<h1 class="innerpage-title">Join Us Now!</h1>
-						<h6 class="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et perspiciatis praesentium maxime quam iste dolorem animi fuga ullam facere at.</h6>
-						<a class="btn mt-5 btn-outline-white mr-3" href="contact.html">View All</a>
+			<div class="container" style="z-index: 10; position: absolute;">
+				<div class="row m-3 col-md-12">
+					<div class="col-md-10">
+						<div class="all-text-white text-left ">
+							<h1 class="innerpage-title">Join Us Now!</h1>
+							<h6 class="subtitle mr-8">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita optio id error consequuntur omnis. Ut, beatae sunt molestiae, dolores sed quod nostrum velit fugiat distinctio cumque explicabo. Nam, itaque id.</h6>
+						</div>
+					</div>
+					<div class="col-md-2">
+						<div class="all-text-white col-md-8 ">
+							<a class="btn mt-3 btn-outline-white mr-3" href="contact.html">Contact Us</a>
+						</div>
 					</div>
 				</div>
+
 			</div>
 		</div>
 <footer class="footer  mt-8 all-text-white">
@@ -617,9 +637,9 @@
 							<li class="list-inline-item mr-4"><i class="fas fa-at"></i> <a href="mailto:manalyticasolutions@gmail.com">manalyticasolutions@gmail.com</a> </li>
 						</ul>
 						<ul class="p-2 mt-3 list-inline">
-							<li class="list-inline-item mr-4"><a class="list-group-item-action" href="#"><i class="fab fa-instagram"></i></a></li>
-							<li class="list-inline-item mr-4"><a class="list-group-item-action" href="#"><i class="fab fa-facebook-f"></i></a></li>
-							<li class="list-inline-item mr-4"><a class="list-group-item-action" href="#"><i class="fab fa-linkedin-in"></i></a></li>
+							<li class="list-inline-item mr-4 social"><a href="#"><i class="fab fa-instagram"></i></a></li>
+							<li class="list-inline-item mr-4 social"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+							<li class="list-inline-item mr-4 social"><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
 						</ul>
 						<!-- footer links -->
 						<div class="copyright-links my-2 mt-3">
@@ -632,7 +652,8 @@
 							</ul>
 						</div>
 						<!-- copyright text -->
-						<div class="copyright-text">©2021 All Rights Reserved </a></div>
+						<div class="copyright-text mt-4"> <a href="index.html">Manalytica</a> ©2021 All Rights Reserved</div> <br>
+						<div class="copyright-text">Created By <a href="https://inetworkhub.com/" target="_blank" rel="noopener noreferrer">INetwork Hub</a></div>
 					</div>
 				</div>
 
@@ -664,6 +685,7 @@
 
 	<!--Template Functions-->
 	<script src="javascripts/functions.js"></script>
+	<script src="javascripts/main.js"></script>
 
 </body>
 </html>

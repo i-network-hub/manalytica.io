@@ -19403,6 +19403,33 @@ xpush
   text-align: center;
 }
 @media (max-width:990px){
+  .fullscreen-video-wrap{
+    height: 90vh;
+    top: -50px;
+  }
+.base-header {
+  height: auto;
+}
+ .base-header h1{
+   margin-left: 20px;
+ }
+  .base-header h6{
+    display: none;
+  }
+  .base-header .btn{
+    margin-top: 0px !important;
+    margin-left: 50px;
+  }
+  .main-heading h1{
+    font-size: 20px;
+    margin-top: 25px;
+  }
+  .main-heading h6{
+    display: none;
+  }
+  .footer{
+    padding-top: 20%;
+  }
 	section{
     text-align: center;
   }
@@ -19419,4 +19446,7 @@ xpush
   .feature-box-icon{
     display: none;
   }
+}
+.social a :hover{
+  color: #9a011f;
 }
