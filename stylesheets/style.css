@@ -19446,6 +19446,9 @@ xpush
   .feature-box-icon{
     display: none;
   }
+  .call{
+    margin-left: 20px;
+  }
 }
 .social a :hover{
   color: #9a011f;
