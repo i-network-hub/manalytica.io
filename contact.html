@@ -16,6 +16,29 @@
             
         <script src="https://kit.fontawesome.com/ab223b40fc.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+        <script type="text/javascript">
+            (function () {
+                // https://dashboard.emailjs.com/admin/integration
+                emailjs.init('user_hgEaHqfMLMC8iNIeJ1LPr');
+            })();
+        </script>
+        <script type="text/javascript">
+            window.onload = function () {
+                document.getElementById('contact-form').addEventListener('submit', function (event) {
+                    event.preventDefault();
+                    // these IDs from the previous steps
+                    emailjs.sendForm('service_mxyovim', 'template_zaao2dp', this)
+                        .then(function () {
+                            console.log('SUCCESS!');
+                        }, function (error) {
+                            console.log('FAILED...', error);
+                        });
+                });
+            }
+        </script>
+
         <style>
             .info .feature-box a:hover{
                 color: #fff;
