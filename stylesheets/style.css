@@ -19401,6 +19401,7 @@ xpush
   border: 1px solid white;
   padding: 10px;
   text-align: center;
+  cursor: pointer;
 }
 @media (max-width:990px){
   .fullscreen-video-wrap{
@@ -19425,7 +19426,7 @@ xpush
     margin-top: 25px;
   }
   .main-heading h6{
-    display: none;
+    font-size: 10px;
   }
   .footer{
     padding-top: 20%;
@@ -19452,4 +19453,10 @@ xpush
 }
 .social a :hover{
   color: #9a011f;
+}
+@media (max-width:320px){
+  .main-heading h1{
+    margin-top: -30px;
+  }
+  
 }

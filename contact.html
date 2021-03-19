@@ -32,8 +32,10 @@
                     emailjs.sendForm('service_mxyovim', 'template_zaao2dp', this)
                         .then(function () {
                             console.log('SUCCESS!');
+                            document.getElementById("contact-form").reset();
                         }, function (error) {
                             console.log('FAILED...', error);
+                            document.getElementById("contact-form").reset();
                         });
                 });
             }
