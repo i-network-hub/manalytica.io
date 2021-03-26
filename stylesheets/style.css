@@ -19421,7 +19421,7 @@ xpush
   }
   .main-heading h1{
     font-size: 20px;
-    margin-top: -10px;
+    margin-top: auto;
   }
   .main-heading h6{
     font-size: 13px;
