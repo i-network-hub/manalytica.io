@@ -19425,7 +19425,7 @@ xpush
     margin-top: 25px;
   }
   .main-heading h6{
-    display: none;
+    font-size: 10px;
   }
   .footer{
     padding-top: 20%;
