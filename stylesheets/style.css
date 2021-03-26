@@ -8264,6 +8264,7 @@ button.bg-dark:focus {
 
 .p-2 {
   padding: 0.5rem !important;
+  margin-left: 25px;
 }
 
 .pt-2,
@@ -15019,7 +15020,6 @@ footer .widget {
 
 /*Sidebar*/
 .sidebar .widget {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   margin-bottom: 30px;
   padding-bottom: 30px;
 }
@@ -15057,7 +15057,6 @@ footer .widget {
   margin: 0;
   padding: 10px 0;
   display: block;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .sidebar .widget .widget-post:last-child {
