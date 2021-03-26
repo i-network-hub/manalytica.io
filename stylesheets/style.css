@@ -19421,10 +19421,10 @@ xpush
   }
   .main-heading h1{
     font-size: 20px;
-    margin-top: auto;
+    margin-top: 25px;
   }
   .main-heading h6{
-    font-size: 13px;
+    font-size: 10px;
   }
   .footer{
     padding-top: 20%;
